@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "tsdx lint src test",
     "build": "tsdx build",
-    "start": "tsdx watch",
+    "dev": "tsdx watch",
     "test": "tsdx test",
     "prepublishOnly": "tsdx build"
   },

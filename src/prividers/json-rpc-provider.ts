@@ -17,11 +17,7 @@ export const removeEmptyHeaders = (headers: AxiosRequestConfig['headers']) => {
 
 export const throwIfErrors = (response: any) => {
   if (response.error) {
-    if (response.error.message) {
-      throw new Error(response.error.message)
-    } else {
-      throw new Error('Unknown jsonrpc error')
-    }
+    throw new Error(response.error.message ? response.error.message : 'Unknown jsonrpc error')
   } else {
     return response
   }
@@ -32,10 +28,9 @@ export class JsonRpcProvider {
   private token: string
 
   constructor(config: ProviderConfig) {
-    if (!config)
-      throw new Error(
-        'Must pass a config object to the Lotus JSON RPC Provider constructor.',
-      )
+    if (!config) {
+      throw new Error('Must pass a config object to the Lotus JSON RPC Provider constructor.')
+    }
     this.url = config.url || 'http://127.0.0.1:1234/rpc/v0'
     this.token = config.token
   }
