@@ -1,1 +1,1 @@
-export * from './json-rpc-provider'
+export * from './jsonrpc.provider'
