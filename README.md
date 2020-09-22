@@ -1,1 +1,1 @@
-# Lotus JSONRPC Provider
+# Lotus JSON RPC Provider
