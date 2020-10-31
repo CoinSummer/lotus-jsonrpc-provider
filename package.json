@@ -1,6 +1,6 @@
 {
   "name": "@coinsummer/lotus-jsonrpc-provider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lotus Json Rpc provider.",
   "license": "MIT",
   "main": "dist/index.js",
@@ -10,8 +10,9 @@
   ],
   "repository": "https://github.com/CoinSummer/lotus-jsonrpc-provider.git",
   "keywords": [
+    "filecoin",
     "lotus",
-    "ethereum"
+    "ipfs"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
